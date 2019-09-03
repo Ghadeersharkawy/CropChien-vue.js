@@ -19,12 +19,13 @@
 
 <script>
 // import { Home } from './components/Home';
- export default {
-    name: 'App',
-//     components: {
-//         Home
-//     },
-     data: () => ({         //
-    })
- };
+export default {
+	name: 'App',
+	//     components: {
+	//         Home
+	//     },
+	data: () => ({
+		//
+	})
+};
 </script>

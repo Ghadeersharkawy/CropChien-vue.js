@@ -1,20 +1,20 @@
 <template>
-	<v-container>
-		<v-layout row wrap>
-			<v-flex> 
-				<v-card md-10 xs-12 mx-auto>
-					<v-img
-					:src="dog.url"
-					aspect-ratio="2.5">
-
-					</v-img>
-					<v-card-title>
-                        <div>
-                            <h3>{{dog.comment}}</h3>
-                        </div>
-                        <div>{{dog.info}}</div>
-                    </v-card-title>
-				</v-card>
+	<v-container grid-list-lg>
+		<v-layout row>
+			<v-flex md-10 xs-12 mx-auto>
+				<v-layout col>
+					<v-card>
+						<v-img :src="dog.url" aspect-ratio="1"> </v-img>
+						<v-card-title>
+							<div>
+								<h2>{{ dog.comment }}</h2>
+							</div>
+							<div>
+								<h5>{{ dog.info }}</h5>
+							</div>
+						</v-card-title>
+					</v-card>
+				</v-layout>
 			</v-flex>
 		</v-layout>
 	</v-container>
@@ -22,11 +22,12 @@
 <script>
 export default {
 	name: 'Details',
-	props:{
+	props: {
 		dog: {
-			type:Object,
-			required:true
+			type: Object,
+			required: true
 		}
 	}
 };
 </script>
+<style scoped></style>
