@@ -21,10 +21,12 @@ export default new Router({
 				import(
 					/* webpackChunkName: "details" */ './components/Details.vue'
 				)
-		},{
+		},
+		{
 			path: '/post',
 			name: 'post',
-			component: () => import(/* webpackChunkName: "post" */'./components/Post.vue')
+			component: () =>
+				import(/* webpackChunkName: "post" */ './components/Post.vue')
 		}
 	]
 });

@@ -7,7 +7,7 @@
 						<v-img :src="dog.url" aspect-ratio="1"> </v-img>
 						<v-card-title>
 							<div>
-								<h2>{{ dog.comment }}</h2>
+								<h3 class="comment">{{ dog.comment }}</h3>
 							</div>
 							<div>
 								<h5>{{ dog.info }}</h5>

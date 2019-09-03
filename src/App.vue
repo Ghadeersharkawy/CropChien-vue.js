@@ -5,8 +5,12 @@
 				<span>Crop</span>
 				<span class="font-weight-light">Chien</span>
 			</v-toolbar-title>
-
-			<v-btn class="ml-4" @click="$router.go(-1)">
+<v-spacer></v-spacer>
+			<v-btn 
+			class="ml-4"
+			color="pink"
+			dark
+             @click="$router.go(-1)">
 				Back
 			</v-btn>
 		</v-app-bar>
@@ -21,9 +25,6 @@
 // import { Home } from './components/Home';
 export default {
 	name: 'App',
-	//     components: {
-	//         Home
-	//     },
 	data: () => ({
 		//
 	})
