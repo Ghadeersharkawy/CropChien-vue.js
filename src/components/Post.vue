@@ -1,42 +1,31 @@
 <template>
 	<v-container>
-		<v-layout row wrap>
-			<v-flex>
+		<v-layout align-center justify-center>
+			<v-flex xs12 sm8 md4>
 				<v-card>
-					<v-card-title>
-						<h2>Add New Dog</h2>
-					</v-card-title>
-				</v-card>
-
-				<form>
-					<v-text-field
-						v-validate="'required'"
-						
-						:counter="10"
-						:error-messages="errors.collect('comment')"
-						label="Comment"
-						data-vv-name="comment"
-						required
-					></v-text-field>
-					<v-text-field
-						v-validate="'required'"
-						
-						:counter="10"
-						:error-messages="errors.collect('info')"
-						label="Info"
-						data-vv-name="info"
-						required
-					></v-text-field>
-
-					<v-btn @click="submit">submit</v-btn>
-					<v-btn @click="clear">clear</v-btn>
-				</form>
+              <v-toolbar dark color="pink">
+                <v-toolbar-title>Add new dog</v-toolbar-title>
+                <v-spacer></v-spacer>
+              </v-toolbar>
+              <v-card-text>
+				  <v-img :src="dog.url" ></v-img>
+                <v-form>
+                  <v-text-field  name="comment" label="Comment" type="text"></v-text-field>
+                  <v-text-field  name="info" label="Info"  type="text"></v-text-field>
+                </v-form>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="pink" dark>POST A DOG</v-btn>
+              </v-card-actions>
+            </v-card>
 			</v-flex>
 		</v-layout>
 	</v-container>
 </template>
 <script>
+import axios from 'axios'
 export default {
-	name:'post'
-};
+	name:"Post"
+}
 </script>
