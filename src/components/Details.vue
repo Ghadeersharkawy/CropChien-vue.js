@@ -1,10 +1,15 @@
 <template>
 	<v-container grid-list-lg>
-		<v-layout row>
+		<v-layout row align-center justify-center>
 			<v-flex md-10 xs-12 mx-auto>
 				<v-layout col>
 					<v-card>
-						<v-img :src="dog.url" aspect-ratio="1"> </v-img>
+						<v-img
+							:src="dog.url"
+							aspect-ratio="1"
+							:alt="dog.comment"
+						>
+						</v-img>
 						<v-card-title>
 							<div>
 								<h3 class="comment">{{ dog.comment }}</h3>
@@ -30,4 +35,4 @@ export default {
 	}
 };
 </script>
-<style scoped></style>
+<style></style>

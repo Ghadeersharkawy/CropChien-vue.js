@@ -1,6 +1,6 @@
 <template>
 	<v-container>
-		<v-layout row>
+		<v-layout row wrap>
 			<v-flex
 				v-for="(dog, index) in dogs"
 				:key="dog.id"
@@ -17,7 +17,8 @@
 						})
 					"
 				>
-					<v-img :src="dog.url" aspect-ratio="1" height="200"></v-img>
+					<v-img :src="dog.url" aspect-ratio="1" min-height="200">
+					</v-img>
 					<v-card-title>
 						<div>
 							<h3 class="comment">{{ dog.comment }}</h3>
