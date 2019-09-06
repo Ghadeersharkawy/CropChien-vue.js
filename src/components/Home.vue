@@ -26,20 +26,21 @@
 						<div>{{ dog.info }}</div>
 					</v-card-title>
 				</v-card>
-				<v-btn
+			
+			</v-flex>
+		</v-layout>
+			<v-btn
 					absolute
 					dark
 					fab
 					bottom
 					right
-					class="mb-5"
+					class="mb-12"
 					color="pink"
 					@click="$router.push({ name: 'post' })"
 				>
 					<v-icon>mdi-plus</v-icon>
 				</v-btn>
-			</v-flex>
-		</v-layout>
 	</v-container>
 </template>
 
