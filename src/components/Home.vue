@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import firebase from '../firebaseConfig'
 export default {
 	name: 'Home',
 	data() {
@@ -73,21 +74,27 @@ export default {
 				{
 					id: 3,
 					url:
-						'https://images.dog.ceo/breeds/mexicanhairless/n02113978_1595.jpg',
-					comment: 'Mexico Xoloitzcuintle',
-					info: 'Posted by Naye on Monday'
-				},
-				{
-					id: 4,
-					url:
 						'https://images.dog.ceo/breeds/dachshund/dog-495133_640.jpg',
 					comment: 'Sad dog',
 					info: 'Posted by Eder on Monday'
 				}
 			]
 		};
-	}
-};
+	},
+	mounted(){
+		firebase.db.collection('dogs').orderBy('created_at').onSnapshot((snapShot) => {
+            //this.dogs=[];
+            snapShot.forEach((dog)  => {
+                this.dogs.push({
+                    id:dog.id,
+                    url:dog.data().imgUrl,
+                    comment:dog.data().comment,
+                    info:dog.data().info
+                })
+            });
+        });
+    }
+}
 </script>
 <style>
 .comment {
